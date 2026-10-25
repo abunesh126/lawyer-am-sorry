@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff8f4">
+<title>A little apology ♡</title>
+<style>
+  :root { --pink:#ed8588; --ink:#303033; --paper:#fffaf6; --soft:#ffe8e3; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100svh; padding:24px 16px;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(145deg,#fffaf6,#fff0ed);
+    color:var(--ink); font-family: ui-rounded, "Trebuchet MS", system-ui, sans-serif;
+  }
+  main {
+    width:min(100%,440px); text-align:center; padding:28px 22px 30px;
+    background:rgba(255,255,255,.72); border:1px solid #ffe4df;
+    border-radius:28px; box-shadow:0 14px 45px rgba(194,110,110,.10);
+  }
+  .tiny-heart { color:var(--pink); font-size:30px; margin-bottom:8px; }
+  h1 { font-size:clamp(2.2rem,10vw,3.1rem); line-height:1.05; margin:4px 0 18px; font-weight:800; letter-spacing:-1.5px; }
+  h1 span { color:var(--pink); }
+  .bear { font-size:clamp(5.5rem,25vw,7rem); line-height:1.15; margin:4px 0 18px; filter:drop-shadow(0 5px 0 #ffe7e1); }
+  .message { font-size:1.03rem; line-height:1.85; margin:0 auto; max-width:340px; }
+  .please { font-size:1.25rem; font-weight:700; margin:22px 0 20px; }
+  .please span { color:var(--pink); }
+  button {
+    border:0; border-radius:16px; background:var(--pink); color:white;
+    padding:15px 25px; font-size:1rem; font-weight:750; cursor:pointer;
+    box-shadow:0 7px 0 #d96e74; transition:transform .15s, box-shadow .15s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  button:active { transform:translateY(4px); box-shadow:0 3px 0 #d96e74; }
+  #response { min-height:28px; margin:18px 0 0; color:#b75f67; font-weight:700; line-height:1.5; }
+  .foot { margin-top:22px; color:#a39a97; font-size:.78rem; }
+  @media (max-width:360px) { main { padding:24px 17px; } .message { font-size:.98rem; } }
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="tiny-heart" aria-hidden="true">♡</div>
+  <h1>I’m Sorry<span> ♡</span></h1>
+  <div class="bear" role="img" aria-label="A cute teddy bear holding a heart">🧸💗</div>
+  <p class="message">
+    I know I messed up. I got angry and said things I shouldn’t have.
+    I’m really sorry for hurting you. You’re a very important friend to me,
+    and I never want one bad moment to hurt our friendship.
+  </p>
+  <p class="please">Please forgive me <span>♡</span></p>
+  <button id="sorryBtn" type="button">A little hug? ♡</button>
+  <p id="response" aria-live="polite"></p>
+  <div class="foot">Made with care, just for you ♡</div>
+</main>
+<script>
+  const button = document.getElementById('sorryBtn');
+  const response = document.getElementById('response');
+  button.addEventListener('click', () => {
+    response.textContent = 'No pressure to reply right now. I just wanted you to know I’m truly sorry. ♡';
+    button.textContent = 'Sending you a hug ♡';
+  });
+</script>
+</body>
+</html>
